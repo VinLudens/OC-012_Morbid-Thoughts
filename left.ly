@@ -47,10 +47,10 @@ left = \absolute {
       r4. r16 a^\mf\( |
       a16 gis gis fis fis dis dis8 ~ |
       dis2\) |
-      r4. r16 a\( |
+      r4. r16 a-\tweak positions #'(5 . 7)\( |
       a16 gis gis fis fis dis' dis'8 ~ |
       dis'2\) |
-      r4. r16 <a, a>\( |
+      r4. r16 <a, a>-\tweak positions #'(5 . 8)\( |
       <a, a>16 <gis, gis> <gis, gis> <fis, fis> <fis, fis> <fis fis'> <fis fis'> <a a'> |
       <gis gis'>2\) |
     }
@@ -191,7 +191,7 @@ left = \absolute {
       <c c'>2 |
       <ais, ais>2 |
       <gis, gis>2 |
-      << { \tuplet 3/2 { fis8\( dis b } ais8\) fis8 } \\ { <fis, fis>2 } >> |
+      << { \tuplet 3/2 { fis8\shape #'((0 . -0.2) (0 . 0.5) (0 . 0) (0 . -1))\( dis b } ais8\) fis8 } \\ { <fis, fis>2 } >> |
     } \new Voice { \voiceTwo \hideNotes \ignore {
       s2 | s2 |
       s4.. <cis cis'>16( |

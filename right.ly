@@ -66,15 +66,15 @@ right = \absolute {
 
 
 
-  << { \voiceOne 
-      r4. r16 <a'' a'''>\( |
+  << { \voiceOne
+      r4. r16 \once\alterBroken positions #'((10 . 10) ()) PhrasingSlur <a'' a'''>\( |
       <a'' a'''> <gis'' gis'''> <gis'' gis'''> <fis'' fis'''> <fis'' fis'''> <dis'' dis'''> <dis'' dis'''>8\) |
       r16 <dis''' dis''''>16\( <dis''' dis''''> <fis''' fis''''> <f''' f''''>4\) |
       r4. r16 <f'' f'''> |
-      <f'' f'''>8 \tuplet 3/2 8 { r16 fis''\( gis'' a'' b'' c''' d''' dis''' e''' } |
+      <f'' f'''>8 \tuplet 3/2 8 { r16 fis''\shape #'((0 . -0.4) (0 . 1) (0 . 0) (-0.3 . -3))\( gis''} \tuplet 6/4 { a'' b'' c''' d''' dis''' e''' } |
       <f'' f'''>2\) |
       r4. r16 <f'' f'''> |
-      <f'' f'''>8 \tuplet 3/2 8 { r16 b'''\( ais''' a''' gis''' g''' fis''' f''' e''' } |
+      <f'' f'''>8 \tuplet 3/2 8 { r16 b'''\shape #'((0 . 1.5) (0 . 0.4) (0 . 1) (-0.5 . -3))\( ais''' } \tuplet 6/4 { a''' gis''' g''' fis''' f''' e''' } |
       dis'''2\) |
     }
     \new Voice { \voiceTwo 
@@ -98,7 +98,7 @@ right = \absolute {
   a' a' gis' gis' ~ |
   gis'2\) |
   r2 |
-  e'8\( e' dis' dis' |
+  e'8-\tweak positions #'(0 . 2)\( e' dis' dis' |
   b' b' a' a' |
   gis'8\) \grace { gis'16( a' } gis'4.\fermata) |
   g'2\fermata |
@@ -160,7 +160,7 @@ right = \absolute {
   r4 <e' g' c'' e''>4 |
   r4 <e' f' ais' d''>4 |
   << { \voiceOne 
-      s4 \tuplet 3/2 { ais'8\( gis' b' ~ } |
+      s4 \tuplet 3/2 { ais'8\shape #'((0 . 0) (0 . 0.7) (0 . -1) (-0.4 . -2.5))\( gis' b' ~ } |
     }
     \new Voice { \voiceTwo 
       r4 <b dis' ais'> |
